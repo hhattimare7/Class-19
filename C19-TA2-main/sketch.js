@@ -38,13 +38,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(600,400);
   
   sun = createSprite(width-100,50);
   sun.addAnimation("sun", sunAnimation);
   sun.scale = 0.1
   
-  trex = createSprite(100,height-70);
+  trex = createSprite(100,150);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided);
   trex.setCollider('circle',0,0,350)
@@ -55,7 +55,7 @@ function setup() {
   invisibleGround.shapeColor = "#f4cbaa";
   invisibleGround.visible = true;
   
-  ground = createSprite(width/2,height,width,2);
+  ground = createSprite(300,200,200,2);
   ground.addImage("ground",groundImage);
   ground.x = width/2
   ground.velocityX = -(6 + 3*score/100);
